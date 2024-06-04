@@ -30,11 +30,12 @@ comentar
 
 import random as rd
 
-user_option = input('Elige piedra, papel o tijera: ');
+user_option = input('Elige piedra, papel o tijera: ').lower();
 game_options = ['piedra', 'papel', 'tijera'];
 
 computer_option = rd.choice(game_options)
 
+print(f'Has escogido {user_option}')
 print(f'La computadora ha escogido {computer_option}')
 
 if user_option == computer_option:
