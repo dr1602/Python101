@@ -1,33 +1,11 @@
-import random as rd
+###  EJEMPLO PARA LA CLASE
+text = 'Ella sabe Python'
+print(text[:-1])
 
-user_option = input('Elige piedra, papel o tijera: ').lower();
-game_options = ['piedra', 'papel', 'tijera'];
+print(text[:-2])
 
-computer_option = rd.choice(game_options)
+print(text[:-3])
 
-print(f'Has escogido {user_option}')
-print(f'La computadora ha escogido {computer_option}')
+print(text[:-4])
 
-if user_option == computer_option:
-    print('Esto es un empate, seleccionaron la misma opcion');
-elif user_option == 'piedra':
-    if computer_option == 'tijera':
-        print('Piedra gana a tijera');
-        print('El o la usuario ha ganado.');
-    else:
-        print('Papel gana a piedra');
-        print('La computadora ha ganado.');
-elif user_option == 'papel':
-    if computer_option == 'tijera':
-        print('Tijera gana a papel');
-        print('La computadora ha ganado.');
-    else:
-        print('Papel gana a piedra');
-        print('El o la usuario ha ganado.');
-elif user_option == 'tijera':
-    if computer_option == 'papel':
-        print('Tijera gana a papel');
-        print('El o la usuario ha ganado.');
-    else:
-        print('Piedra gana a tijera');
-        print('La computadora ha ganado.');
+print(text[:-5])
