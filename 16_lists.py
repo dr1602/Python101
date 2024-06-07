@@ -41,3 +41,4 @@ print(True in types)
 # True
 
 print('hola' in types)
+# True
