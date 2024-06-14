@@ -1,4 +1,4 @@
-# while es similar al if como en
+# while es similar al if como en, con un condicional
 
 if True:
     print('Se ha ejecutado')

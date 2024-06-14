@@ -1,8 +1,18 @@
-counter = 0
+nakamas = [
+    {
+        'name': 'Monkey D. Luffy',
+        'position': 'Captian',    
+    },
+    {
+        'name': 'Nami',
+        'position': 'Navigator',    
+    },
+    {
+        'name': 'Roronoa Zoro',
+        'position': '1st Commander',    
+    },
 
-while counter < 9:
-    counter += 1
-    print(counter)
-    if counter < 6:
-        continue
-    print(f'Contando hasta {counter}')
+]
+    
+for i in nakamas:
+    print('name of nakama: ', i['name'])
