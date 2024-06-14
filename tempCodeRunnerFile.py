@@ -1,21 +1,8 @@
-person = {
-    'name': 'Nicolas',
-    'lastName': 'Molina',
-    'age': 29
-}
+counter = 0
 
-person_social_media = {
-    'twitter': '@nicobytes'
-}
-
-person.update(person_social_media)
-# print(person)
-
-person['name'] = 'Felipe'
-# print(person)
-
-del person['age']
-# print(person)
-
-print(list(person.keys()))
-print(list(person.values()))
+while counter < 9:
+    counter += 1
+    print(counter)
+    if counter < 6:
+        continue
+    print(f'Contando hasta {counter}')
