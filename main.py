@@ -29,6 +29,9 @@ while True:
         
         if user_option == computer_option:
             print('Esto es un empate, seleccionaron la misma opcion');
+            
+            print('*' * 12)
+            print(f'El marcador es {user_victories} punto(s) a favor del usario y {computer_victories} punto(s) a favor de la compu.')
         elif user_option == 'piedra':
             if computer_option == 'tijera':
                 print('Piedra gana a tijera');
@@ -103,6 +106,9 @@ while True:
             
             if user_option == computer_option:
                 print('Esto es un empate, seleccionaron la misma opcion');
+                
+                print('*' * 12)
+                print(f'El marcador es {user_victories} punto(s) a favor del usario y {computer_victories} punto(s) a favor de la compu.')
             elif user_option == 'piedra':
                 if computer_option == 'tijera':
                     print('Piedra gana a tijera');
