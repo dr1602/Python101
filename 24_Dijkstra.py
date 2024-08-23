@@ -13,11 +13,9 @@ class Graph:
         if 0 <= vertex < self.size:
             self.vertex_data[vertex] = data
 
-    def dijkstra(self, start_vertex_data, end_vertex_data):
+    def dijkstra(self, start_vertex_data):
         start_vertex = self.vertex_data.index(start_vertex_data)
-        end_vertex = self.vertex_data.index(end_vertex_data)
         distances = [float('inf')] * self.size
-        predecessors = [None] * self.size
         distances[start_vertex] = 0
         visited = [False] * self.size
 
@@ -29,22 +27,18 @@ class Graph:
                     min_distance = distances[i]
                     u = i
 
-            if u is None or u == end_vertex:
-                print(f"Breaking out of loop. Current vertex: {self.vertex_data[u]}")
-                print(f"Distances: {distances}")
+            if u is None:
                 break
 
             visited[u] = True
-            print(f"Visited vertex: {self.vertex_data[u]}")
 
             for v in range(self.size):
                 if self.adj_matrix[u][v] != 0 and not visited[v]:
                     alt = distances[u] + self.adj_matrix[u][v]
                     if alt < distances[v]:
                         distances[v] = alt
-                        predecessors[v] = u
 
-        return distances[end_vertex], self.get_path(predecessors, start_vertex_data, end_vertex_data)
+        return distances
 
 g = Graph(7)
 
@@ -68,6 +62,7 @@ g.add_edge(1, 5, 2)  # B -> F, weight 2
 g.add_edge(6, 5, 5)  # G -> F, weight 5
 
 # Dijkstra's algorithm from D to all vertices
-    
-distance, path = g.dijkstra('D', 'F')
-print(f"Path: {path}, Distance: {distance}")
+print("Dijkstra's Algorithm starting from vertex D:\n")
+distances = g.dijkstra('D')
+for i, d in enumerate(distances):
+    print(f"Shortest distance from D to {g.vertex_data[i]}: {d}")
